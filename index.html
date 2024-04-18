@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container disable">
+        <h2>Éditeur d'images </h2>
+        <div class="wrapper">
+            <div class="editor-panel">
+                <div class="filter">
+                    <label class="title">filtres</label>
+                    <div class="options">
+                        <button id="brightness" class="active">Luminosité</button>
+                        <button id="saturation">Saturation</button>
+                        <button id="inversion">Inversion</button>
+                        <button id="grayscale">Niveaux de gris</button>
+                       
+                    </div>
+                    <div class="slider">
+                        <div class="filter-info">
+                            <p class="name">Luminosité</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200">
+                    </div>
+                </div>
+                <div class="rotate">
+                    <label class="title">Faire pivoter et retourner</label>
+                    <div class="options">
+                        <button id="left"><i class="fa fa-solid fa fa-rotate-left"></i></button>
+                        <button id="right"><i class="fa fa-solid fa fa-rotate-right"></i></button>
+                        <button id="horizontal"><i class="bx bx-reflect-vertical"></i></button>
+                        <button id="vertical"><i class="bx bx-reflect-horizontal"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-img">
+                <img src="undraw_photos_re_pvh3.svg" alt="preview-img" width="450px">
+            </div>
+        </div>
+        <div class="controls">
+            <button class="reset-filter">Réinitialiser les filtres</button>
+            <div class="row">
+                <input type="file" class="file-input" accept="Image/*" hidden>
+                <button class="choose-img">Choisir une image</button>
+                <button class="save-img">Enregistrer l'image</button>
+
+            </div>
+        </div>
+        <button id="removebg">Enlevez l'arrière plan</button>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
